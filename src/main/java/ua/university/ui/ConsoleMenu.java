@@ -35,21 +35,64 @@ public class ConsoleMenu {
     }
 
     private void addStudent() {
-        System.out.print("ПІБ: ");
-        String name = scanner.nextLine();
-        if (name.isBlank()) {
-            System.out.println("Помилка: ПІБ не може бути порожнім!");
-            return;
+        // --- ВАЛІДАЦІЯ ПІБ ---
+        String name;
+        while (true) {
+            System.out.print("ПІБ (Прізвище Ім'я По батькові): ");
+            name = scanner.nextLine().trim();
+
+            if (name.isBlank()) {
+                System.out.println("Помилка: ПІБ не може бути порожнім!");
+                continue;
+            }
+
+            String[] parts = name.split("\\s+");
+            if (parts.length < 3) {
+                System.out.println("Помилка: Введіть ПІБ повністю (мінімум 3 слова)!");
+                continue;
+            }
+            break;
         }
 
-        System.out.print("Група: ");
-        String group = scanner.nextLine();
+        // --- ВАЛІДАЦІЯ ГРУПИ ---
+        String group;
+        while (true) {
+            System.out.print("Група (1-6): ");
+            group = scanner.nextLine().trim();
+            try {
+                int groupNum = Integer.parseInt(group);
+                if (groupNum < 1 || groupNum > 6) {
+                    System.out.println("Помилка: номер групи має бути від 1 до 6!");
+                    continue;
+                }
+                break; // вихід з циклу, якщо число 1-6
+            } catch (NumberFormatException e) {
+                System.out.println("Помилка: введіть число (цифру від 1 до 6)!");
+            }
+        }
 
-        // Спрощений приклад створення для Checkpoint 1
-        Student student = new Student(name, LocalDate.of(2000, 1, 1),
-                "email@ukma.edu", "000", 1, group, "ID-123");
+        // --- ВАЛІДАЦІЯ КУРСУ ---
+        int course = 1;
+        while (true) {
+            System.out.print("Курс (1-6): ");
+            try {
+                course = Integer.parseInt(scanner.nextLine());
+                if (course < 1 || course > 6) {
+                    System.out.println("Помилка: курс має бути від 1 до 6!");
+                    continue;
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Помилка: введіть число!");
+            }
+        }
+
+        // Створення студента з валідованими даними
+        Student student = new Student(name, LocalDate.of(2005, 1, 1),
+                "student@ukma.edu", "00000", course, group, "ID-" + (int)(Math.random()*1000));
+
         studentRepository.save(student);
-        System.out.println("Студента успішно додано!");
+        System.out.println("Студента успішно додано до групи " + group + "!");
     }
 
     private void showAllStudents() {
@@ -57,16 +100,30 @@ public class ConsoleMenu {
         if (students.isEmpty()) {
             System.out.println("Список порожній.");
         } else {
+            System.out.println("--- Список всіх студентів ---");
             students.forEach(System.out::println);
         }
     }
 
     private void searchStudent() {
-        System.out.print("Введіть ПІБ для пошуку: ");
-        String name = scanner.nextLine();
+        System.out.print("Введіть повне ПІБ для пошуку: ");
+        String name = scanner.nextLine().trim();
+
+        // Додаткова перевірка: ПІБ для пошуку має бути мінімум 3 слова
+        String[] parts = name.split("\\s+");
+        if (parts.length < 3) {
+            System.out.println("Помилка: Для точного пошуку введіть повне ПІБ (3 слова)!");
+            return;
+        }
+
         var result = studentRepository.findByName(name);
-        result.forEach(System.out::println);
+
+        if (result.isEmpty()) {
+            System.out.println("Студентів з таким ПІБ не знайдено (перевірте правильність написання).");
+        } else {
+            System.out.println("Результати пошуку:");
+            result.forEach(System.out::println);
+        }
+
     }
-
-
 }
