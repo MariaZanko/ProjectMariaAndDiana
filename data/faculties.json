@@ -2,12 +2,54 @@
   "code" : "FI",
   "name" : "Факультет інформатики",
   "shortName" : "ФІ",
-  "deanId" : "T-001",
-  "contacts" : "корп. 1, к. 322, fi@ukma.edu.ua"
+  "deanId" : "FI",
+  "contacts" : "(044) 425 60 64"
 }, {
   "code" : "FGN",
   "name" : "Факультет гуманітарних наук",
   "shortName" : "ФГН",
   "deanId" : "T-020",
   "contacts" : "корп. 1, к. 215, fgn@ukma.edu.ua"
+}, {
+  "code" : "FES",
+  "name" : "Факультет економічних наук",
+  "shortName" : "FES",
+  "deanId" : null,
+  "contacts" : "(044) 425 60 42, 425 77 37"
+}, {
+  "code" : "FSST",
+  "name" : "Факультет соціальних наук та соціальних технологій",
+  "shortName" : "FSST",
+  "deanId" : null,
+  "contacts" : "(044) 463 58 63"
+}, {
+  "code" : "FCS",
+  "name" : "Факультет інформатики",
+  "shortName" : "FCS",
+  "deanId" : null,
+  "contacts" : "(044) 425 60 64"
+}, {
+  "code" : "FLS",
+  "name" : "Факультет правничих наук",
+  "shortName" : "FLS",
+  "deanId" : null,
+  "contacts" : "38(044) 425 60 73"
+}, {
+  "code" : "FNS",
+  "name" : "Факультет природничих наук",
+  "shortName" : "FNS",
+  "deanId" : null,
+  "contacts" : "(044) 425 60 57"
+}, {
+  "code" : "KMAPRO",
+  "name" : "Факультет «Києво-Могилянська школа професійної та неперервної освіти»",
+  "shortName" : "KMAPRO",
+  "deanId" : null,
+  "contacts" : "pro@ukma.edu.ua"
+}, {
+  "code" : "FHSWP",
+  "name" : "Факультет охорони здоров’я, соціальної роботи та психології",
+  "shortName" : "ФОЗСРП",
+  "deanId" : null,
+  "contacts" : "oksamyt@ukma.edu.ua"
 } ]

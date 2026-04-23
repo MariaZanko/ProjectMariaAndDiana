@@ -1,1 +1,22 @@
-[ ]
+[ {
+  "id" : "257e6c48-5f66-44ac-8adc-0acdf40029bd",
+  "firstName" : "asas",
+  "lastName" : "Zkasj",
+  "patronymic" : "assa",
+  "birthDate" : "2005-01-01",
+  "email" : "aksjs@",
+  "phone" : "+380182763918",
+  "studentId" : "ST-3593",
+  "course" : 1,
+  "group" : "6",
+  "enrollYear" : 2026,
+  "studyForm" : "CONTRACT",
+  "status" : "STUDYING",
+  "departmentCode" : "120",
+  "emailOptional" : {
+    "empty" : false,
+    "present" : true
+  },
+  "fullName" : "Zkasj asas assa",
+  "age" : 21
+} ]
