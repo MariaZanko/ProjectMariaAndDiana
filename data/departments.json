@@ -1,0 +1,13 @@
+[ {
+  "code" : "INF-DEPT",
+  "name" : "Кафедра інформатики",
+  "headTeacherId" : "T-002",
+  "location" : "корп. 1, к. 305",
+  "facultyCode" : "FI"
+}, {
+  "code" : "MM-DEPT",
+  "name" : "Кафедра мультимедійних систем",
+  "headTeacherId" : "T-001",
+  "location" : "корп. 6, к. 402",
+  "facultyCode" : "FI"
+} ]

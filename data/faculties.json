@@ -1,0 +1,13 @@
+[ {
+  "code" : "FI",
+  "name" : "Факультет інформатики",
+  "shortName" : "ФІ",
+  "deanId" : "T-001",
+  "contacts" : "корп. 1, к. 322, fi@ukma.edu.ua"
+}, {
+  "code" : "FGN",
+  "name" : "Факультет гуманітарних наук",
+  "shortName" : "ФГН",
+  "deanId" : "T-020",
+  "contacts" : "корп. 1, к. 215, fgn@ukma.edu.ua"
+} ]
