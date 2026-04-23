@@ -10,4 +10,22 @@
   "headTeacherId" : "T-001",
   "location" : "корп. 6, к. 402",
   "facultyCode" : "FI"
+}, {
+  "code" : "120",
+  "name" : "Кафедра інформатики",
+  "headTeacherId" : null,
+  "location" : "225",
+  "facultyCode" : "FI"
+}, {
+  "code" : "124",
+  "name" : "Кафедра математики",
+  "headTeacherId" : null,
+  "location" : "",
+  "facultyCode" : "FI"
+}, {
+  "code" : "119",
+  "name" : "Кафедра мережевих технологій",
+  "headTeacherId" : null,
+  "location" : "331",
+  "facultyCode" : "FI"
 } ]

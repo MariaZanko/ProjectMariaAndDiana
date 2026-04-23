@@ -15,4 +15,11 @@ public class DepartmentRepository extends AbstractJsonRepository<Department, Str
                 .filter(d -> facultyCode.equals(d.getFacultyCode()))
                 .collect(Collectors.toList());
     }
+    public Optional<Department> findByCode(String code) {
+        if (code == null) return Optional.empty();
+        return store.values().stream()
+                .filter(d -> code.equalsIgnoreCase(d.getCode().trim()))
+                .findFirst();
+    }
 }
+

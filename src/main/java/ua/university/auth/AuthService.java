@@ -15,9 +15,9 @@ public class AuthService {
 
     public AuthService() {
         // Default users
-        users.add(new User("admin", "123", Role.ADMIN));
-        users.add(new User("manager", "123", Role.MANAGER));
-        users.add(new User("user", "123", Role.USER));
+        users.add(new User("Admin", "123", Role.ADMIN));
+        users.add(new User("Manager", "123", Role.MANAGER));
+        users.add(new User("User", "123", Role.USER));
     }
 
     public boolean login(String username, String password) {
